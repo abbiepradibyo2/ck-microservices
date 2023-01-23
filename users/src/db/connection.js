@@ -15,7 +15,7 @@ module.exports = async() => {
     } catch (error) {
         console.error('Error ============ ON DB Connection')
         console.log(error);
-    }
+    } 
  
 };
 
