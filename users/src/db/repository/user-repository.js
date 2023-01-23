@@ -4,17 +4,20 @@ const { UserModel } = require('../models');
 
 class UserRepository {
 
-    async CreateUser({ email, password, phone, salt }){
+    async CreateUser({ email,username,fullname, password, salt }){
 
         const user = new UserModel({
             email,
+            username,
+            fullname,
             password,
-            salt,
-            phone,
-            address: []
+            salt
         })
 
         const userResult = await user.save();
         return userResult;
     }
 }
+
+
+module.exports = UserRepository;

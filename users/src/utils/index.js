@@ -3,6 +3,7 @@ const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 
 const {
+  APP_SECRET,
   EXCHANGE_NAME,
   MSG_QUEUE_URL,
 } = require("../config");

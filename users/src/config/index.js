@@ -13,5 +13,6 @@ module.exports = {
     DB_URL: process.env.MONGODB_URI,
     EXCHANGE_NAME: process.env.EXCHANGE_NAME,
     MSG_QUEUE_URL: process.env.MSG_QUEUE_URL,
+    APP_SECRET:process.env.APP_SECRET,
    
   };

@@ -18,7 +18,7 @@ module.exports = (app, channel) => {
        
       
         const { email, password, username, fullname } = req.body;
-        console.log(email)
+      
         const { data } = await service.SignUp({ email, password, username, fullname });
         res.json(data);
     });

@@ -22,19 +22,8 @@ class UserService {
         
       const existingUser = await this.repository.CreateUser({ email, password: userPassword, username,fullname, salt});
         
-        // const token = await GenerateSignature({ email: email, _id: existingCustomer._id});
-
-        console.log("-----");
-        console.log(salt);
-        console.log("-----");
-        console.log(userPassword);
-        console.log("-----");
-        // console.log(token);
-        // console.log("-----");
-        // console.log(existingCustomer);
-        // console.log("-----");
-
-      return FormateData({id: salt, userPassword });
+      const token = await GenerateSignature({ email: email, _id: existingUser._id});
+        return FormateData({id: existingUser._id, token });
 
     }
 
