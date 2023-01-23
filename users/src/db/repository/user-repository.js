@@ -11,7 +11,7 @@ class UserRepository {
             username,
             fullname,
             password,
-            salt
+            salt 
         })
 
         const userResult = await user.save();
