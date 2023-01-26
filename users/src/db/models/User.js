@@ -12,14 +12,11 @@ const UserSchema = new Schema(
 
     posts: [
       {
-        _id: { type: String, require: true },
         deskripsi: { type: String, require: true },
         date: { type: Date, default: Date.now() },
         lat: { type: String, require: true },
         long: { type: String, require: true },
-        images: {
-          url: { type: String },
-        },
+        image: { type: String, require: true },
       },
     ],
   },
